@@ -1,55 +1,84 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>#1336 - Profile Card</title>
-    
-    
-    
-    
-        <link rel="stylesheet" href="css/style.css">
+<html>
 
-    
-    
-    
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>#1336 - Profile Card</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body>
+<body>
+  <div id="container">
+    <ul id="filterOptions">
+      <li class="active"><a href="#" class="default">Default</a></li>
+      <li><a href="#" class="project">Project</a></li>
+      <li><a href="#" class="education">Education</a></li>
+    </ul>
 
     <figure class="snip1336">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg" alt="sample87" />
-  <figcaption>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="profile-sample4" class="profile" />
-    <h2>Hans Down<span>Engineer</span></h2>
-    <p>I'm looking for something that can deliver a 50-pound payload of snow on a small feminine target. Can you suggest something? Hello...? </p>
-    <a href="index2.html" class="info">More Info</a>
-    <a href="#" class="info">More Info</a>
-  </figcaption>
-</figure>
-<figure class="snip1336 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74" />
-  <figcaption>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample2.jpg" alt="profile-sample2" class="profile" />
-    <h2>Wisteria Widget<span>Photographer</span></h2>
-    <p>Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you? Calvin: Nobody thinks I'm a genius.</p>
-    <a href="index2.html" class="follow">More Info</a>
-    <a href="#" class="info">More Info</a>
-  </figcaption>
-</figure>
-<figure class="snip1336"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg" alt="sample69" />
-  <figcaption>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg" alt="profile-sample5" class="profile" />
-    <h2>Desmond Eagle<span>Accountant</span></h2>
-    <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-    <a href="index2.html" class="follow">More Info</a>
-    <a href="#" class="info">More Info</a>
-  </figcaption>
-</figure>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg" alt="sample87" />
+      <figcaption>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="profile-sample4" class="profile"
+        />
+        <h2>Hans Down<span>Engineer</span></h2>
+        <p class="card-content">I'm looking for something that can deliver a 50-pound payload of snow on a small feminine target. Can you suggest
+          something? Hello...? </p>
+        <a href="index2.html" class="info">More Info</a>
+        <a href="#" class="info">More Info</a>
+      </figcaption>
+    </figure>
+    <figure class="snip1336 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample74.jpg" alt="sample74" />
+      <figcaption>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample2.jpg" alt="profile-sample2" class="profile"
+        />
+        <h2>Wisteria Widget<span>Photographer</span></h2>
+        <p class="card-content">Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you? Calvin: Nobody thinks
+          I'm a genius.</p>
+        <a href="index2.html" class="follow">More Info</a>
+        <a href="#" class="info">More Info</a>
+      </figcaption>
+    </figure>
+    <figure class="snip1336"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample69.jpg" alt="sample69" />
+      <figcaption>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg" alt="profile-sample5" class="profile"
+        />
+        <h2>Desmond Eagle<span>Accountant</span></h2>
+        <p class="card-content">If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant
+          but learning".</p>
+        <a href="index2.html" class="follow">More Info</a>
+        <a href="#" class="info">More Info</a>
+      </figcaption>
+    </figure>
+  </div>
 
-        <script src="js/index.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/index.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#filterOptions li a').click(function () {
+        // fetch the class of the clicked item
+        var ourClass = $(this).attr('class');
 
-    
-    
-    
-  </body>
+        // reset the active class on all the buttons
+        $('#filterOptions li').removeClass('active');
+        // update the active state on our clicked button
+        $(this).parent().addClass('active');
+
+        switch (ourClass) {
+          case 'default':
+            $('.card-content').text("All info");
+            break;
+          case 'project':
+            $('.card-content').text("Project");
+            break;
+          case 'education':
+            $('.card-content').text("Education");
+            break;
+        }
+        return false;
+      });
+    });
+  </script>
+</body>
+
 </html>
