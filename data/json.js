@@ -5,9 +5,9 @@
     "photo": "https://www.linkedin.com/mpr/mpr/AAEAAQAAAAAAAAlsAAAAJGYwY2Q3NjM0LTY1YTQtNDRjNi1hZTNjLTk3OTFhNTViYTcwNw.jpg",
     "brief": "I am a full stack developer with 2 years of experience. Involving with java, javascript and php.",
     "social": {
-      "facebook": "link",
+      "facebook": "https://www.facebook.com/tiko.Luis.Cisneros",
       "linkedin": "https://www.linkedin.com/in/luiscisnerosg/",
-      "twitter": "link"
+      "twitter": "https://twitter.com/TikoCisneros"
     },
     "experience": [
       {
@@ -18,7 +18,7 @@
       },
       {
         "business": "Nemecis Solutions",
-        "job": "Website development.",
+        "job": "Website developer",
         "activities": "Development of static and dynamic websites (html, joomla, wordpress).",
         "tags": "Web Development, joomla"
       }
@@ -35,13 +35,13 @@
       {
         "name": "Ibarra Tourism App",
         "place": "Ibarra - Ecuador",
-        "description": "Android Tourism App building with Apache Cordova and web technologies.",
+        "description": "Android Tourism App builded with Apache Cordova and web technologies.",
         "tags": "Android"
       }
     ],
     "certifications": [
       {
-        "title": "Cisco IT ESSENTIALS",
+        "title": "Cisco IT ESSENTIALS BASIC",
         "description": "Universidad Técnica del Norte, Academia CISCO / Enero de 2013",
         "tags": "Cisco"
       },
