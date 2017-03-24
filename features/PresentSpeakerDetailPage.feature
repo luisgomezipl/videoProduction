@@ -8,6 +8,11 @@ Scenario: Speaker Detail Page - Verify Speakers Data integrity
  When i click on button "more info" on a profile card
  Then it must be return a json object containing the following information for each speaker: photo,name, social network links, working experience, education and training, projects, certifications and awards.
 
+Scenario: Speaker Detail Page - Menu and Back Button
+ Given i clicked on button "more info" on a profile card
+ When the speakers detail page opened
+ Then the menu must display with a back button and links to navigate for this sections: home, working experience, education and training, projects and certifications.
+
 Scenario Outline: Speaker Detail Page - Check speakers photo
  Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
