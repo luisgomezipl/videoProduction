@@ -42,9 +42,26 @@ Examples:
  | Gabriel | I am a computer science student for 3 years, specializing in information systems and experienced in javascript, java and C#. |
  | Emanuel | I am student of the Master in Computer Engineering - Mobile Computing at the Polytechnic of Leiria - IPL. I have knowledge in computer networks, Java, JavaScript and Arduino programming. |
  | Luis    | I am a full stack developer with 2 years of experience. Involving with java, javascript and php.|
-	
-Scenario: Landing Page - View Speaker Social Networks
-  Then the profle card of the <speaker> must be presented with an <state> icon of the <social network> redirecting to <link>
+ 
+ Background:
+  Given that i'm on the landing page
+
+Scenario: Landing Page - View Speaker Enabled Social Networks
+  And the <speaker> has a profile page on the <social network>
+  When the page finishes loading
+  Then the profle card of the <speaker> must be presented with an enabled icon of the <social network> redirecting to <link>
+  
+Examples:
+ | speaker | social network | link    |
+ | Emanuel | facebook       | "https://www.facebook.com/emanuel.silva.146" |
+ | Luis    | linkedIn       | "https://www.linkedin.com/in/luiscisnerosg/" |
+ | Luis    | facebook       | "https://www.facebook.com/tiko.Luis.Cisneros" |
+ | Luis    | twitter        | "https://twitter.com/TikoCisneros"|
+ 
+Scenario: Landing Page - View Speaker Disabled Social Networks
+  And the <speaker> hasn't a profile page on the <social network>
+  When the page finishes loading
+  Then the profle card of the <speaker> must be presented with an disabled icon of the <social network>
   
 Examples:
  | speaker |   state  | social network | link    |
@@ -52,30 +69,33 @@ Examples:
  | Gabriel | disabled | facebook       | No link |
  | Gabriel | disabled | twitter        | No link |
  | Emanuel | disabled | linkedIn       | No link |
- | Emanuel | enabled  | facebook       | "https://www.facebook.com/emanuel.silva.146" |
  | Emanuel | disabled | twitter        | No link |
- | Luis    | enabled  | linkedIn       | "https://www.linkedin.com/in/luiscisnerosg/" |
- | Luis    | enabled  | facebook       | "https://www.facebook.com/tiko.Luis.Cisneros" |
- | Luis    | enabled  | twitter        | "https://twitter.com/TikoCisneros"|
 
 	
-Scenario: Landing Page - View Speaker Social Networks Links
-  Given that i'm on the landing page
-  When I press a social network <icon>
-  And the <icon> is <state>
-  Then the I should be <result> redirected to the <speaker> page in the <social network> 
+Scenario: Landing Page - Verify Enabled Redirect Speaker Social Networks Links
+  And the icon of the <social network> for the <speaker> is enabled
+  When I press a social network <icon> of the <speaker>
+  Then the I should be redirected to the <speaker> page in the <social network> 
   
 Examples:
- | speaker |   state  | social network | result      |
- | Gabriel | disabled | linkedIn       | not         |
- | Gabriel | disabled | facebook       | not         |
- | Gabriel | disabled | twitter        | not         |
- | Emanuel | disabled | linkedIn       | not         |
- | Emanuel | enabled  | facebook       | succesfully |
- | Emanuel | disabled | twitter        | not         |
- | Luis    | enabled  | linkedIn       | succesfully |
- | Luis    | enabled  | facebook       | succesfully |
- | Luis    | enabled  | twitter        | succesfully |
+ | speaker | social network |
+ | Emanuel | facebook       |
+ | Luis    | linkedIn       |
+ | Luis    | facebook       |
+ | Luis    | twitter        |
+ 
+ Scenario: Landing Page - Verify Disabled Redirect Speaker Social Networks Links
+  And the icon of the <social network> for the <speaker> is disabled
+  When I press a social network <icon> of the <speaker>
+  Then i shouldn't be redirected to any page
+  
+Examples:
+ | speaker | social network |
+ | Gabriel | linkedIn       |
+ | Gabriel | facebook       |
+ | Gabriel | twitter        |
+ | Emanuel | linkedIn       |
+ | Emanuel | twitter        |
 	
 Scenario: Landing Page - Verify Speaker Data integrity
   Given that i request the speaker profile cards information 
