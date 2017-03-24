@@ -64,12 +64,12 @@ Scenario Outline: Landing Page - View Speaker Disabled Social Networks
   Then the profle card of the <speaker> must be presented with an disabled icon of the <social network>
   
 Examples:
- | speaker |   state  | social network | link    |
- | Gabriel | disabled | linkedIn       | No link |
- | Gabriel | disabled | facebook       | No link |
- | Gabriel | disabled | twitter        | No link |
- | Emanuel | disabled | linkedIn       | No link |
- | Emanuel | disabled | twitter        | No link |
+ | speaker | social network |
+ | Gabriel | linkedIn       |
+ | Gabriel | facebook       |
+ | Gabriel | twitter        |
+ | Emanuel | linkedIn       |
+ | Emanuel | twitter        |
 
 	
 Scenario Outline: Landing Page - Verify Enabled Redirect Speaker Social Networks Links
