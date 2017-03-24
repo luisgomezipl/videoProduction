@@ -52,14 +52,14 @@ Examples:
  | Gabriel | disabled | facebook       | No link |
  | Gabriel | disabled | twitter        | No link |
  | Emanuel | disabled | linkedIn       | No link |
- | Emanuel | enabled  | facebook       | "LINKKKK PLZZZ" |
+ | Emanuel | enabled  | facebook       | "https://www.facebook.com/emanuel.silva.146" |
  | Emanuel | disabled | twitter        | No link |
- | Luis    | enabled  | linkedIn       | "LINKKKK PLZZZ" |
- | Luis    | enabled  | facebook       | "LINKKKK PLZZZ" |
- | Luis    | enabled  | twitter        | "LINKKKK PLZZZ"|
+ | Luis    | enabled  | linkedIn       | "https://www.linkedin.com/in/luiscisnerosg/" |
+ | Luis    | enabled  | facebook       | "https://www.facebook.com/tiko.Luis.Cisneros" |
+ | Luis    | enabled  | twitter        | "https://twitter.com/TikoCisneros"|
 
 	
-Scenario: Open Landing Page - View Speaker Social Networks Links
+Scenario: Landing Page - View Speaker Social Networks Links
   Given that i'm on the landing page
   When I press a social network <icon>
   And the <icon> is <state>
@@ -77,7 +77,13 @@ Examples:
  | Luis    | enabled  | facebook       | succesfully |
  | Luis    | enabled  | twitter        | succesfully |
 	
-Scenario: Open Landing Page - Verify Speakers Data integrity
+Scenario: Landing Page - Verify Speaker Data integrity
   Given that i request the speaker profile cards information 
   When the page finishes loading
-  Then it should be return a json object containing the following information for each speaker: name, title, photo, social links, relevant work
+  Then it should be return a json object containing the following information for the <speaker>: name, title, photo, social links, short bio
+  
+  Examples:
+ | speaker |
+ | Gabriel |
+ | Emanuel |
+ | Luis    |
