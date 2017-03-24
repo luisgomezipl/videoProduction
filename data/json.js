@@ -18,7 +18,7 @@
       },
       {
         "business": "Nemecis Solutions",
-        "job": "Website development.",
+        "job": "Website developer",
         "activities": "Development of static and dynamic websites (html, joomla, wordpress).",
         "tags": "tag1, tag2"
       }
@@ -35,13 +35,13 @@
       {
         "name": "Ibarra Tourism App",
         "place": "Ibarra - Ecuador",
-        "description": "Android Tourism App building with Apache Cordova and web technologies.",
+        "description": "Android Tourism App builded with Apache Cordova and web technologies.",
         "tags": "tag1, tag2"
       }
     ],
     "certifications": [
       {
-        "title": "Cisco IT ESSENTIALS",
+        "title": "Cisco IT ESSENTIALS BASIC",
         "description": "Universidad Técnica del Norte, Academia CISCO / Enero de 2013",
         "tags": "tag1, tag2"
       },
