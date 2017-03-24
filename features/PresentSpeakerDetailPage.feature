@@ -48,11 +48,6 @@ Scenario: Speaker Detail Page - Check speakers certifications
  When the speakers detail page opened
  Then the page should be display the list of certifications of the speaker selected.
  
-Scenario: Speaker Detail Page - Check speakers awards
- Given i clicked on button "more info" on a profile card
- When the speakers detail page opened
- Then the page should be display the list of awars of the speaker selected.
- 
 Scenario: Select Keywords to change profile card information - Verify Speakers Data integrity
  Given that i request the speaker profile cards information 
  When the page finishes loading

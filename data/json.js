@@ -1,77 +1,78 @@
 [
   {
-    "name": "Luis Gomez",
-    "title": "Ing. XXX",
-    "photo": "",
-    "brief": "Desenvolvedor XXX",
+    "name": "Luis Alberto Cisneros Gómez",
+    "title": "Computational Systems Engineer",
+    "photo": "https://www.linkedin.com/mpr/mpr/AAEAAQAAAAAAAAlsAAAAJGYwY2Q3NjM0LTY1YTQtNDRjNi1hZTNjLTk3OTFhNTViYTcwNw.jpg",
+    "brief": "I am a full stack developer with 2 years of experience. Involving with java, javascript and php.",
     "social": {
       "facebook": "link",
-      "linkedin": "link",
+      "linkedin": "https://www.linkedin.com/in/luiscisnerosg/",
       "twitter": "link"
     },
     "experience": [
       {
-        "business": "Business 1",
-        "job": "job 1",
-        "activities": "activities 1",
+        "business": "Yachay E.P.",
+        "job": "Web programmer",
+        "activities": "Development of web applications, web services, web apps.",
         "tags": "tag1, tag2"
       },
       {
-        "business": "Business 2",
-        "job": "job 2",
-        "activities": "activities 2",
+        "business": "Nemecis Solutions",
+        "job": "Website development.",
+        "activities": "Development of static and dynamic websites (html, joomla, wordpress).",
         "tags": "tag1, tag2"
       }
     ],
     "education": [
       {
-        "place": "place 1",
-        "title": " title 1",
-        "level": "level 1",
-        "tags": "tag1, tag2"
-      },
-      {
-        "place": "place 2",
-        "title": " title 2",
-        "level": "level 2",
+        "place": "Universidad Técnica del Norte",
+        "title": "Computational Systems Engineer",
+        "level": "Bachelor",
         "tags": "tag1, tag2"
       }
     ],
     "projects": [
       {
-        "name": "pj 1",
-        "place": "place 1",
-        "description": "description 1",
-        "tags": "tag1, tag2"
-      },
-      {
-        "name": "pj 2",
-        "place": "place 2",
-        "description": "description 2",
+        "name": "Ibarra Tourism App",
+        "place": "Ibarra - Ecuador",
+        "description": "Android Tourism App building with Apache Cordova and web technologies.",
         "tags": "tag1, tag2"
       }
     ],
     "certifications": [
       {
-        "title": "title 1",
-        "description": "description 1",
+        "title": "Cisco IT ESSENTIALS",
+        "description": "Universidad Técnica del Norte, Academia CISCO / Enero de 2013",
         "tags": "tag1, tag2"
       },
       {
-        "title": "title 1",
-        "description": "description 2",
-        "tags": "tag1, tag2"
-      }
-    ],
-    "awards": [
-      {
-        "title": "title 1",
-        "description": "description 1",
+        "title": "Certificate of Completion: PHP Course",
+        "description": "SoloLearn Licencia 1059-593722 / February 2016",
         "tags": "tag1, tag2"
       },
       {
-        "title": "title 1",
-        "description": "description 2",
+        "title": "Certificate of Completion: JavaScript Fundamentals",
+        "description": "SoloLearn Licencia 1024-593722 / February 2016",
+        "tags": "tag1, tag2"
+      },
+      {
+        "title": "Certificate of Completion: SQL Fundamentals",
+        "description": "SoloLearn Licencia 1060-593722 / February 2016",
+        "tags": "tag1, tag2"
+      },
+      {
+        "title": "Certificate of Completion: HTML Fundamentals",
+        "description": "SoloLearn Licencia 1014-593722 / February 2016",
+        "tags": "tag1, tag2"
+      },
+      {
+        "title": "Certificate of Completion: CSS Fundamentals",
+        "description": "SoloLearn Licencia 1023-593722 / February 2016",
+        "tags": "tag1, tag2"
+      },
+      {
+        "title": "Certificate of Completion: Java Course",
+        "description": "SoloLearn Licencia 1068-593722 / February 2016",
         "tags": "tag1, tag2"
       }
     ]
