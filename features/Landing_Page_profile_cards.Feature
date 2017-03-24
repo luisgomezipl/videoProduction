@@ -25,7 +25,7 @@ Examples:
  | Emanuel | emanuel.png |
  | Luis    | luis.png    |
  
-Scenario: Open Landing Page - View Speaker Title
+Scenario Outline: Open Landing Page - View Speaker Title
   Then the profle card of the <speaker> must be presented with the <title>
   
 Examples:
@@ -34,7 +34,7 @@ Examples:
  | Emanuel | Computer Engineer |
  | Luis    | Computational Systems Engineer |
  
-Scenario: Open Landing Page - View Speaker short bio 
+Scenario Outline: Open Landing Page - View Speaker short bio 
   Then the profle card of the <speaker> must be presented with the <short bio>
   
 Examples:
@@ -43,10 +43,10 @@ Examples:
  | Emanuel | I am student of the Master in Computer Engineering - Mobile Computing at the Polytechnic of Leiria - IPL. I have knowledge in computer networks, Java, JavaScript and Arduino programming. |
  | Luis    | I am a full stack developer with 2 years of experience. Involving with java, javascript and php.|
  
- Background:
+Background:
   Given that i'm on the landing page
 
-Scenario: Landing Page - View Speaker Enabled Social Networks
+Scenario Outline: Landing Page - View Speaker Enabled Social Networks
   And the <speaker> has a profile page on the <social network>
   When the page finishes loading
   Then the profle card of the <speaker> must be presented with an enabled icon of the <social network> redirecting to <link>
@@ -58,7 +58,7 @@ Examples:
  | Luis    | facebook       | "https://www.facebook.com/tiko.Luis.Cisneros" |
  | Luis    | twitter        | "https://twitter.com/TikoCisneros"|
  
-Scenario: Landing Page - View Speaker Disabled Social Networks
+Scenario Outline: Landing Page - View Speaker Disabled Social Networks
   And the <speaker> hasn't a profile page on the <social network>
   When the page finishes loading
   Then the profle card of the <speaker> must be presented with an disabled icon of the <social network>
@@ -72,7 +72,7 @@ Examples:
  | Emanuel | disabled | twitter        | No link |
 
 	
-Scenario: Landing Page - Verify Enabled Redirect Speaker Social Networks Links
+Scenario Outline: Landing Page - Verify Enabled Redirect Speaker Social Networks Links
   And the icon of the <social network> for the <speaker> is enabled
   When I press a social network <icon> of the <speaker>
   Then the I should be redirected to the <speaker> page in the <social network> 
@@ -84,7 +84,7 @@ Examples:
  | Luis    | facebook       |
  | Luis    | twitter        |
  
- Scenario: Landing Page - Verify Disabled Redirect Speaker Social Networks Links
+Scenario Outline: Landing Page - Verify Disabled Redirect Speaker Social Networks Links
   And the icon of the <social network> for the <speaker> is disabled
   When I press a social network <icon> of the <speaker>
   Then i shouldn't be redirected to any page
@@ -97,7 +97,7 @@ Examples:
  | Emanuel | linkedIn       |
  | Emanuel | twitter        |
 	
-Scenario: Landing Page - Verify Speaker Data integrity
+Scenario Outline: Landing Page - Verify Speaker Data integrity
   Given that i request the speaker profile cards information 
   When the page finishes loading
   Then it should be return a json object containing the following information for the <speaker>: name, title, photo, social links, short bio
