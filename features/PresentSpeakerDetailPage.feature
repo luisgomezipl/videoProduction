@@ -8,47 +8,63 @@ Scenario: Speaker Detail Page - Verify Speakers Data integrity
  When i click on button "more info" on a profile card
  Then it should be return a json object containing the following information for each speaker: photo,name, social network links, working experience, education and training, projects, certifications and awards.
 
-Scenario: Speaker Detail Page - Check speakers photo
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers photo
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
- Then the page should be display the photo of the speaker selected.
+ Then the page should be display the photo conctent in <image>.
+
+Examples:
+
+|  speaker  | 						image						 |
+|  Luis     | 			    http://bit.ly/2nMqfy5				 |
+|  Gabriel  | 			    http://bit.ly/2nMqfy5				 |
+|  Emanuel  | 			    http://bit.ly/2nMqfy5				 |
  
-Scenario: Speaker Detail Page - Check speakers name
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers name
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
- Then the page should be display the name of the speaker selected.
+ Then the page should be display the <name> of the speaker selected.
+
+Examples:
+
+|  speaker  | 						name						 |
+|  Luis     | 		    Luis Alberto Cisneros Gómez				 |
+|  Gabriel  | 			    http://bit.ly/2nMqfy5				 |
+|  Emanuel  | 			    http://bit.ly/2nMqfy5				 |
  
-Scenario: Speaker Detail Page - Check speakers title
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers title
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
- Then the page should be display the title of the speaker selected.
+ Then the page should be display the <title> of the speaker selected.
+
+Examples:
+
+|  speaker  | 						title						 |
+|  Luis     | 		    Computational Systems Engineer			 |
+|  Gabriel  | 			    http://bit.ly/2nMqfy5				 |
+|  Emanuel  | 			    http://bit.ly/2nMqfy5				 |
  
-Scenario: Speaker Detail Page - Check speakers social networks
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers social networks
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
  Then the page should be display the social networks icons of the speaker selected.
  
-Scenario: Speaker Detail Page - Check speakers work experience
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers work experience
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
  Then the page should be display the list of work experience of the speaker selected.
  
-Scenario: Speaker Detail Page - Check speakers education
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers education
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
  Then the page should be display the list of personal education of the speaker selected.
  
-Scenario: Speaker Detail Page - Check speakers projects
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers projects
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
  Then the page should be display the list of projects of the speaker selected.
  
-Scenario: Speaker Detail Page - Check speakers certifications
- Given i clicked on button "more info" on a profile card
+Scenario Outline: Speaker Detail Page - Check speakers certifications
+ Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
  Then the page should be display the list of certifications of the speaker selected.
- 
-Scenario: Select Keywords to change profile card information - Verify Speakers Data integrity
- Given that i request the speaker profile cards information 
- When the page finishes loading
- Then it should be return a json object containing the following information one speaker: name, title, photo, social links, relevant work, working experience, education and training, projects, certifications and awards

@@ -5,9 +5,9 @@
     "photo": "https://www.linkedin.com/mpr/mpr/AAEAAQAAAAAAAAlsAAAAJGYwY2Q3NjM0LTY1YTQtNDRjNi1hZTNjLTk3OTFhNTViYTcwNw.jpg",
     "brief": "I am a full stack developer with 2 years of experience. Involving with java, javascript and php.",
     "social": {
-      "facebook": "link",
+      "facebook": "https://www.facebook.com/tiko.Luis.Cisneros",
       "linkedin": "https://www.linkedin.com/in/luiscisnerosg/",
-      "twitter": "link"
+      "twitter": "https://twitter.com/TikoCisneros"
     },
     "experience": [
       {
