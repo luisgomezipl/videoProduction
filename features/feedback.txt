@@ -1,0 +1,26 @@
+- Features
+--- The 3 features presented describe the mandatory requirements, no extra feature is described
+--- The scenarios provide the "free text" search
+
+- Scenarios
+--- "a JSon object" ????? really ??? how is the user going to see it?
+--- In the "Scenario Outline: Speaker Detail Page - Check speakers social networks" your test should stop before
+"redirecting to <link>" since there is no way to redirect to "no link" (as given in the examples table)
+--- In the feature "PresentSpeakerDetailPage" why not use the "Background" for a set of scenarios that have exactly
+the same "Given"-"When"? You have used it elsewhere.
+--- In the "Scenario Outline: Write keyword to search profile card information - Dont found information" - the last
+column in the examples table is not necessary - it's the same value for all the examples.
+
+- Gherkin
+--- Consistency should be achieved (the validation of the speaker photo is not the same for the social network logo -
+aren't they all images?)
+--- Correct usage of backgrounds (sometimes!), scenario outlines, examples tables and scenarios
+
+Version Control System Usage
+- Commit messages are explanatory but the text could be improved
+--- What was the update conducted in the commit "updated feature LandingPage"?
+- One of the members of the team does not appear as contributor of the repository
+--- A balanced throughput of the commits shows an equally distributed work load
+
+English
+- There are some (few) typos. Nothing serious.
