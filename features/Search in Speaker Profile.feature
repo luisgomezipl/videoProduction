@@ -58,27 +58,31 @@ Scenario Outline: Write keyword to search profile card information - Found infor
   And the <keyword> is contained in <speaker> sections about education, projects and certifications
   When i write <keyword> in the search bar on top of the page
   Then the profile card content of the <speaker> adjusts automatically with the <information> found related to the words searched.
+
 Examples:
   | keyword | speaker | information |
   | Ecuador | Luis | "name": "Ibarra Tourism App","place": "Ibarra - Ecuador","description": "Android Tourism App building with Apache Cordova and web technologies.","tags": "Android" |
   | game | Gabriel | "name": "Evolution of Virtual Creatures","place": "Polytechnic of Leiria","description": "The developed application allows to evolve the form and behaviors of virtual creatures. To this end a genetic algorithm has been implemented that evolves neural networks that control the creatures. These creatures are created and simulated in the Unity3D game engine.","tags": "A.I, Unity" |
   | raspberry | Emanuel | "name": "Silent Television","place": "Polytechnic Institute of Leiria","description": "This work aims at creating a product which would allow the users of a commercial space to hear the sound of a television in that space even if there was a great amount of noise. For this purpose, we developed an equipment that captures and conveys the sound of the television to Android smartphones/tablets. This equipment is connected to the television and the router on-site ad conveys the audio through the network to the Android devices, also sending some information on the television and transmission setups to these devices.","tags": "Raspberry Pi, Java"|
-	
+
 Scenario Outline: Write keyword to search profile card information - Dont found information
   Given that i'm on the landing page
   And the <keyword> is not contained in <speaker> sections about education, projects and certifications
   When i write <keyword> in the search bar on top of the page
   Then the profile card content of the <speaker> that dont have information for the <keyword> searched show a <message>.
 Examples:
-  | keyword | speaker | message|
-  | Ecuador | Emanuel | No information found |
-  | Ecuador | Gabriel | No information found |
-  | game | Emanuel | No information found |
-  | game | Luis | No information found |
-  | raspberry | Gabriel | No information found |
-  | raspberry | Luis | No information found |
+  | keyword | speaker |
+  | Ecuador | Emanuel |
+  | Ecuador | Gabriel |
+  | game | Emanuel |
+  | game | Luis |
+  | raspberry | Gabriel |
+  | raspberry | Luis |
+
 	
 Scenario: Select Keywords to search profile card information - Verify Speakers Data integrity
   Given that i request the speaker profile cards information 
   When the page finishes loading
   Then it should be return a json object containing the following information for each speaker: working experience, education and training, projects, certifications and the respetive tags for each of this setions
+
+  #really? a Json object? How is the user going to see this json object?
