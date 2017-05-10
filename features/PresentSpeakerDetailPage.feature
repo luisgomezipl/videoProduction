@@ -7,24 +7,23 @@ Scenario: Speaker Detail Page - Verify Speakers Data integrity
  Given that i'm on the landing page
  When i click on button "more info" on a profile card
  Then it must be return a json object containing the following information for each speaker: photo,name, social network links, working experience, education and training, projects, certifications and awards.
- #really? a Json object? How is the user going to see this json object?
 
 Scenario: Speaker Detail Page - Menu and Back Button
  Given i clicked on button "more info" on a profile card
  When the speakers detail page opened
- Then the menu must display with a back button and links to navigate for this sections: home, working experience, education and training, projects and certifications.
+ Then the menu must display with a back button and links to navigate for this sections: home, resume (education, working experience and certifications), and  relevant projects.
 
 Scenario Outline: Speaker Detail Page - Check speakers photo
  Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
- Then the page must be display the photo content in <image>.
+ Then the page must be display the photo conctent in <image>.
 
 Examples:
 
 |  speaker  | image       |
-|  Luis     | luis.png    |
-|  Gabriel  | gabriel.png |
-|  Emanuel  | emanuel.png |
+|  Luis     | luis.jpg    |
+|  Gabriel  | gabriel.jpg |
+|  Emanuel  | emanuel.jpg |
  
 Scenario Outline: Speaker Detail Page - Check speakers name
  Given i clicked on button "more info" on a profile card of <speaker>
@@ -54,10 +53,6 @@ Scenario Outline: Speaker Detail Page - Check speakers social networks
  Given i clicked on button "more info" on a profile card of <speaker>
  When the speakers detail page opened
  Then the page must be presented with an <state> icon of the <social network> redirecting to <link>.
-#you should have stopped the test without the "redirecting to <link>" -> how will I redirect to "No Link"?
-# suggestion: split the examples table into two tables that are separated by a new THEN that considers the description
-# "No Link" OR remove the <link> placeholder and corresponding column in the examples table and describe a scenario that
-# when the icon is disabled presents the "No Link" message
 
 Examples:
  | speaker |   state  | social network | link                                         |

@@ -18,13 +18,12 @@ Examples:
   
 Scenario Outline: Landing Page - View Speaker Photo
   Then the profle card of the <speaker> must be presented with the photo of speaker <photo>
-  #<photo> not <name>
   
 Examples:
- | speaker |    photo    |
- | Gabriel | gabriel.png |
- | Emanuel | emanuel.png |
- | Luis    | luis.png    |
+ | speaker |    name     |
+ | Gabriel | gabriel.jpg |
+ | Emanuel | emanuel.jpg |
+ | Luis    | luis.jpg    |
  
 Scenario Outline: Open Landing Page - View Speaker Title
   Then the profle card of the <speaker> must be presented with the <title>
@@ -50,7 +49,7 @@ Background:
 Scenario Outline: Landing Page - View Speaker Enabled Social Networks
   And the <speaker> has a profile page on the <social network>
   When the page finishes loading
-  Then the profile card of the <speaker> must be presented with an enabled icon of the <social network> redirecting to <link>
+  Then the profle card of the <speaker> must be presented with an enabled icon of the <social network> redirecting to <link>
   
 Examples:
  | speaker | social network | link    |
@@ -102,8 +101,7 @@ Scenario Outline: Landing Page - Verify Speaker Data integrity
   Given that i request the speaker profile cards information 
   When the page finishes loading
   Then it should be return a json object containing the following information for the <speaker>: name, title, photo, social links, short bio
-  #really? a Json object? How is the user going to see this json object?
-
+  
   Examples:
  | speaker |
  | Gabriel |
