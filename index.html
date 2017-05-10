@@ -49,17 +49,17 @@
     function createPrincipalInformation(){
       $.getJSON("data/luisData.js", function(result){
           jsonLuis = result[0];
-          stringHtml ='<img src="../images/background1.png" alt="background1" /><figcaption><img src="'+jsonLuis['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonLuis['name']+'<span>'+jsonLuis['title']+'</span></h2><p class="card-content" id="luis">'+jsonLuis['brief']+'</p><center>'+validateSocial(jsonLuis['social'])+'<br><a href="personal.html?id=0" class="info">More Info</a></center></figcaption>';
+          stringHtml ='<img src="../images/background1.png" alt="background1" /><figcaption><img src="'+jsonLuis['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonLuis['name']+'</h2><h2><span>'+jsonLuis['title']+'</span></h2><p class="card-content" id="luis">'+jsonLuis['brief']+'</p><center>'+validateSocial(jsonLuis['social'])+'<br><a href="personal.html?id=0" class="info">More Info</a></center></figcaption>';
           $('#luis-info').append(stringHtml);
       });
       $.getJSON("data/emanuelData.js", function(result){
           jsonEmanuel = result[0];
-          stringHtml ='<img src="../images/background2.png" alt="background2" /><figcaption><img src="'+jsonEmanuel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonEmanuel['name']+'<span>'+jsonEmanuel['title']+'</span></h2><p class="card-content" id="emanuel">'+jsonEmanuel['brief']+'</p><center>'+validateSocial(jsonEmanuel['social'])+'<br><a href="personal.html?id=1" class="info">More Info</a></center></figcaption>';
+          stringHtml ='<img src="../images/background2.png" alt="background2" /><figcaption><img src="'+jsonEmanuel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonEmanuel['name']+'</h2><h2><span>'+jsonEmanuel['title']+'</span></h2><p class="card-content" id="emanuel">'+jsonEmanuel['brief']+'</p><center>'+validateSocial(jsonEmanuel['social'])+'<br><a href="personal.html?id=1" class="info">More Info</a></center></figcaption>';
           $('#emanuel-info').append(stringHtml);
       });
       $.getJSON("data/gabrielData.js", function(result){
           jsonGabriel = result[0];
-          stringHtml ='<img src="../images/background3.png" alt="background3" /><figcaption><img src="'+jsonGabriel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonGabriel['name']+'<span>'+jsonGabriel['title']+'</span></h2><p class="card-content" id="gabriel">'+jsonGabriel['brief']+'</p><center>'+validateSocial(jsonGabriel['social'])+'<br><a href="personal.html?id=2" class="info">More Info</a></center></figcaption>';
+          stringHtml ='<img src="../images/background3.png" alt="background3" /><figcaption><img src="'+jsonGabriel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonGabriel['name']+'</h2><h2><span>'+jsonGabriel['title']+'</span></h2><p class="card-content" id="gabriel">'+jsonGabriel['brief']+'</p><center>'+validateSocial(jsonGabriel['social'])+'<br><a href="personal.html?id=2" class="info">More Info</a></center></figcaption>';
           $('#gabriel-info').append(stringHtml);
       });
     }
