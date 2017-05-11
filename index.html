@@ -68,15 +68,15 @@
       var cont = 0;
       var strHtml = '<br>';
       if(jsonSocial['facebook']!=''){
-        strHtml += '<a target="_blank" href="'+jsonSocial['facebook']+'" class="social"><img src="../images/fb.png"/></a>';
+        strHtml += '<a target="_blank" href="'+jsonSocial['facebook']+'" class="social facebook"><img src="../images/fb.png"/></a>';
         cont++;
       }
       if(jsonSocial['twitter']!=''){
-        strHtml += '<a target="_blank" href="'+jsonSocial['twitter']+'" class="social"><img src="../images/twitter.png"/></a>';
+        strHtml += '<a target="_blank" href="'+jsonSocial['twitter']+'" class="social twitter"><img src="../images/twitter.png"/></a>';
         cont++;
       }
       if(jsonSocial['linkedin']!=''){
-        strHtml += '<a target="_blank" href="'+jsonSocial['linkedin']+'" class="social"><img src="../images/in.png"/></a>';
+        strHtml += '<a target="_blank" href="'+jsonSocial['linkedin']+'" class="social linkedin"><img src="../images/in.png"/></a>';
         cont++;
       }
       if(cont>0){

@@ -350,15 +350,15 @@
          var cont = 0;
          var strHtml = '<ul class="social">';
          if(jsonSocial['facebook']!=''){
-           strHtml += '<li><a target="_blank" href="'+jsonSocial['facebook']+'"><i class="fa fa-facebook"></i></a></li>';
+           strHtml += '<li><a target="_blank" href="'+jsonSocial['facebook']+'" class="facebook"><i class="fa fa-facebook"></i></a></li>';
            cont++;
          }
          if(jsonSocial['twitter']!=''){
-           strHtml += '<li><a target="_blank" href="'+jsonSocial['twitter']+'"><i class="fa fa-twitter"></i></a></li>';
+           strHtml += '<li><a target="_blank" href="'+jsonSocial['twitter']+'" class="twitter"><i class="fa fa-twitter"></i></a></li>';
            cont++;
          }
          if(jsonSocial['linkedin']!=''){
-           strHtml += '<li><a target="_blank" href="'+jsonSocial['linkedin']+'"><i class="fa fa-linkedin"></i></a></li>';
+           strHtml += '<li><a target="_blank" href="'+jsonSocial['linkedin']+'" class="linkedin"><i class="fa fa-linkedin"></i></a></li>';
            cont++;
          }
          if(cont>0){
