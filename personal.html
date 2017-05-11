@@ -7,7 +7,7 @@
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+	<title>Profile Details Page</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -342,6 +342,7 @@
       }
 
       function loadHeadInformation(resultJson){
+		document.title = resultJson['name'] + ' - Details Page';
         textHtml = '<h1 class="responsive-headline">'+resultJson['name']+'</h1><h3>'+resultJson['title']+'</h3><hr/>'+validateSocial(resultJson['social']);
         $('#header-text').html(textHtml);
       }
