@@ -49,17 +49,18 @@
     function createPrincipalInformation(){
       $.getJSON("data/luisData.js", function(result){
           jsonLuis = result[0];
-          stringHtml ='<img src="../images/background1.png" alt="background1" /><figcaption><img src="'+jsonLuis['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonLuis['name']+'</h2><h2><span>'+jsonLuis['title']+'</span></h2><p class="card-content" id="luis">'+jsonLuis['brief']+'</p><center>'+validateSocial(jsonLuis['social'])+'<br><a href="personal.html?id=0" class="info">More Info</a></center></figcaption>';
+          stringHtml ='<img src="../images/background1.png" alt="background1" /><figcaption><img src="'+jsonLuis['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonLuis['name']+'</h2><h2><span>'+jsonLuis['title']+'</span></h2><div id="luis"><p class="card-content">'+jsonLuis['brief']+'</p></div>'
+            +'<center>'+validateSocial(jsonLuis['social'])+'<br><a href="personal.html?id=0" class="info">More Info</a></center></figcaption>';
           $('#luis-info').append(stringHtml);
       });
       $.getJSON("data/emanuelData.js", function(result){
           jsonEmanuel = result[0];
-          stringHtml ='<img src="../images/background2.png" alt="background2" /><figcaption><img src="'+jsonEmanuel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonEmanuel['name']+'</h2><h2><span>'+jsonEmanuel['title']+'</span></h2><p class="card-content" id="emanuel">'+jsonEmanuel['brief']+'</p><center>'+validateSocial(jsonEmanuel['social'])+'<br><a href="personal.html?id=1" class="info">More Info</a></center></figcaption>';
+          stringHtml ='<img src="../images/background2.png" alt="background1" /><figcaption><img src="'+jsonEmanuel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonEmanuel['name']+'</h2><h2><span>'+jsonEmanuel['title']+'</span></h2><div id="emanuel"><p class="card-content">'+jsonEmanuel['brief']+'</p></div><center>'+validateSocial(jsonEmanuel['social'])+'<br><a href="personal.html?id=0" class="info">More Info</a></center></figcaption>';
           $('#emanuel-info').append(stringHtml);
       });
       $.getJSON("data/gabrielData.js", function(result){
           jsonGabriel = result[0];
-          stringHtml ='<img src="../images/background3.png" alt="background3" /><figcaption><img src="'+jsonGabriel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonGabriel['name']+'</h2><h2><span>'+jsonGabriel['title']+'</span></h2><p class="card-content" id="gabriel">'+jsonGabriel['brief']+'</p><center>'+validateSocial(jsonGabriel['social'])+'<br><a href="personal.html?id=2" class="info">More Info</a></center></figcaption>';
+          stringHtml ='<img src="../images/background3.png" alt="background1" /><figcaption><img src="'+jsonGabriel['photo']+'" alt="profile-photo" class="profile" /><h2>'+jsonGabriel['name']+'</h2><h2><span>'+jsonGabriel['title']+'</span></h2><div id="gabriel"><p class="card-content">'+jsonGabriel['brief']+'</p></div><center>'+validateSocial(jsonGabriel['social'])+'<br><a href="personal.html?id=0" class="info">More Info</a></center></figcaption>';
           $('#gabriel-info').append(stringHtml);
       });
     }
@@ -119,15 +120,15 @@
     }
 
     function loadDefautInformation(){
-      $('.card-content#luis').text(jsonLuis['brief']);
-      $('.card-content#emanuel').text(jsonEmanuel['brief']);
-      $('.card-content#gabriel').text(jsonGabriel['brief']);
+      $('#luis').html('<p class="card-content">'+jsonLuis['brief']+'</p>');
+      $('#emanuel').html('<p class="card-content">'+jsonEmanuel['brief']+'</p>');
+      $('#gabriel').html('<p class="card-content">'+jsonGabriel['brief']+'</p>');
     }
 
     function searchEstructureInformation(infoType){
-      $('.card-content#luis').html(buildEstructureInformation(jsonLuis[infoType], infoType));
-      $('.card-content#emanuel').html(buildEstructureInformation(jsonEmanuel[infoType], infoType));
-      $('.card-content#gabriel').html(buildEstructureInformation(jsonGabriel[infoType], infoType));
+      $('#luis').html(buildEstructureInformation(jsonLuis[infoType], infoType));
+      $('#emanuel').html(buildEstructureInformation(jsonEmanuel[infoType], infoType));
+      $('#gabriel').html(buildEstructureInformation(jsonGabriel[infoType], infoType));
     }
 
     function searchMatchWithTag(tag){
@@ -145,9 +146,9 @@
         }
       });
       if(htmlValue.length > 0){
-        $('.card-content#luis').html(htmlValue);
+        $('#luis').html(htmlValue);
       }else{
-        $('.card-content#luis').text('No information found.');
+        $('#luis').html('<p class="card-content">No information found.</p>');
       }
     }
 
@@ -160,9 +161,9 @@
         }
       });
       if(htmlValue.length > 0){
-        $('.card-content#emanuel').html(htmlValue);
+        $('#emanuel').html(htmlValue);
       }else{
-        $('.card-content#emanuel').text('No information found.');
+        $('#emanuel').html('<p class="card-content">No information found.</p>');
       }
     } 
 
@@ -175,9 +176,9 @@
         }
       });
       if(htmlValue.length > 0){
-        $('.card-content#gabriel').html(htmlValue);
+        $('#gabriel').html(htmlValue);
       }else{
-        $('.card-content#gabriel').text('No information found.');
+        $('#gabriel').html('<p class="card-content">No information found.</p>');
       }
     }  
 
@@ -219,9 +220,9 @@
         }
       });
       if(htmlValue.length > 0){
-        $('.card-content#luis').html(htmlValue);
+        $('#luis').html(htmlValue);
       }else{
-        $('.card-content#luis').text('No information found.');
+        $('#luis').html('<p class="card-content">No information found.</p>');
       }
     } 
 
@@ -234,9 +235,9 @@
         }
       });
       if(htmlValue.length > 0){
-        $('.card-content#emanuel').html(htmlValue);
+        $('#emanuel').html(htmlValue);
       }else{
-        $('.card-content#emanuel').text('No information found.');
+        $('#emanuel').html('<p class="card-content">No information found.</p>');
       }
     }
 
@@ -249,9 +250,9 @@
         }
       });
       if(htmlValue.length > 0){
-        $('.card-content#gabriel').html(htmlValue);
+        $('#gabriel').html(htmlValue);
       }else{
-        $('.card-content#gabriel').text('No information found.');
+        $('#gabriel').html('<p class="card-content">No information found.</p>');
       }
     }     
 
@@ -276,17 +277,17 @@
       switch (infoType) {
           case 'projects':
             $.each(jsonInfo, function(i, field){
-              htmlString += field['name']+': '+field['description'].substr(0,150)+'...<br>';
+              htmlString += '<p class="card-content">'+field['name']+': '+field['description'].substr(0,150)+'...</p>';
             }); 
             break;
           case 'education':
             $.each(jsonInfo, function(i, field){
-              htmlString += field['title']+', in '+field['place']+'.<br>';
+              htmlString += '<p class="card-content">'+field['title']+' in '+field['place']+'.</p>';
             }); 
             break;
           case 'experience':
             $.each(jsonInfo, function(i, field){
-              htmlString += field['job']+', in '+field['business']+'. '+field['activities']+'<br>';
+              htmlString += '<p class="card-content">'+field['job']+' in '+field['business']+'. '+field['activities']+'</p>';
             });
             break;
         }
