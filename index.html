@@ -276,17 +276,17 @@
       switch (infoType) {
           case 'projects':
             $.each(jsonInfo, function(i, field){
-              htmlString += '<strong>'+field['name']+': </strong><em>'+field['description'].substr(0,150)+'...</em><br>';
+              htmlString += field['name']+': '+field['description'].substr(0,150)+'...<br>';
             }); 
             break;
           case 'education':
             $.each(jsonInfo, function(i, field){
-              htmlString += '<strong>'+field['title']+'</strong> in <em>'+field['place']+'.</em><br>';
+              htmlString += field['title']+', in '+field['place']+'.<br>';
             }); 
             break;
           case 'experience':
             $.each(jsonInfo, function(i, field){
-              htmlString += '<strong>'+field['job']+'</strong> in <em>'+field['business']+'.</em><br>';
+              htmlString += field['job']+', in '+field['business']+'. '+field['activities']+'<br>';
             });
             break;
         }
