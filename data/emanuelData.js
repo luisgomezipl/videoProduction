@@ -26,8 +26,8 @@
     {
       "place": "Polytechnic Institute of Leiria",
       "title": "Computer Science",
-      "level": "Bacherlor Degree",
-      "tags": "Bacherlor"
+      "level": "Bachelor Degree",
+      "tags": "Bachelor"
     }
   ],
   "projects": [

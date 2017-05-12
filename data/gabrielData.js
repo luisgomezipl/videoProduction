@@ -19,20 +19,20 @@
   "education": [
     {
       "place": "Polytechnic of Leiria",
-      "title": "MOBILE COMPUTING",
-      "level": "MASTER DEGREE",
+      "title": "Mobile Computing",
+      "level": "Master Degree",
       "tags": "Master"
     },
     {
       "place": "Polytechnic of Leiria",
-      "title": "COMPUTER SCIENCE",
-      "level": "BACHELOR DEGREE",
-      "tags": "Bacherlor"
+      "title": "Computer Science",
+      "level": "Bachelor Degree",
+      "tags": "Bachelor"
     },
     {
       "place": "Escola Secundária Raul Proença, Caldas da Rainha, Portugal",
       "title": "Course of science and technology",
-      "level": "HIGH SCHOOL",
+      "level": "High School",
       "tags": "High School"
     }
   ],
