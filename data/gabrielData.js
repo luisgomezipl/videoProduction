@@ -41,14 +41,14 @@
       "name": "Evolution of Virtual Creatures",
       "place": "Polytechnic of Leiria",
       "description": "The developed application allows to evolve the form and behaviors of virtual creatures. To this end a genetic algorithm has been implemented that evolves neural networks that control the creatures. These creatures are created and simulated in the Unity3D game engine.",
-      "tags": "A.I, Unity"
+      "tags": "AI, Unity"
     }
   ],
   "certifications": [
     {
       "title": "Workshop IBM: Big Data",
       "description": "Held on July 12 and 13 at the School of Technology and Management of the Polytechnic Institute of Leiria, lasting eleven hours.",
-      "tags": "Big Data, IBM"
+      "tags": "big-data, IBM"
     }
   ]
 }]

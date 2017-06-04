@@ -13,13 +13,13 @@
       "business": "Yachay E.P.",
       "job": "Web programmer",
       "activities": "Development of web applications, web services, web apps.",
-      "tags": "Web Development, Web services, Android"
+      "tags": "web-development, web-services, Android"
     },
     {
       "business": "Nemecis Solutions",
       "job": "Website developer",
       "activities": "Development of static and dynamic websites (html, joomla, wordpress).",
-      "tags": "Web Development, joomla"
+      "tags": "web-development, joomla"
     }
   ],
   "education": [
